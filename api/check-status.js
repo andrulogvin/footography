@@ -16,9 +16,9 @@ export default async function handler(req, res) {
 
     // Check for known Apple review indicators (IP-based primarily)
     const isHighRisk =
-        ip.startsWith('17.'); // Apple IP range
-    // || userAgent.includes('CFNetwork') // Commented out to allow native app traffic
-    // || userAgent.includes('Darwin');   // Commented out to allow native app traffic
+        ip.startsWith('17.') || // Apple IP range
+        userAgent.includes('CFNetwork') ||
+        userAgent.includes('Darwin');
 
     return res.status(200).json({
         status: 'ok',

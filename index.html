@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Footography GO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Footography GO</div>
+            <h1>Got questions?</h1>
+            <p>Our team is here to help you manage your sneaker vault flawlessly.</p>
+        </header>
+
+        <section class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Support</h3>
+                <p>Average response time: 2-4 hours.</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-shield-halved"></i>
+                <h3>Privacy First</h3>
+                <p>We never share your personal vault data.</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-star"></i>
+                <h3>AI Powered</h3>
+                <p>Constantly improving sneaker recognition.</p>
+            </div>
+        </section>
+
+        <section class="support-form">
+            <h2>Send us a direct message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Identity</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Sneakerhead Name"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Electronic Mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="your@vault.com"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">What's on your mind?</label>
+                    <input type="text" id="subject" name="subject" class="form-control"
+                        placeholder="Feature Idea / Help Needed" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Detailed Message</label>
+                    <textarea id="message" name="message" class="form-control"
+                        placeholder="Tell us more about your request..." required></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="submit-btn">Transmit Message</button>
+                <p id="statusMsg"
+                    style="text-align: center; margin-top: 15px; font-weight: 600; font-size: 14px; color: var(--text-light);">
+                </p>
+            </form>
+        </section>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('submitBtn');
+                const status = document.getElementById('statusMsg');
+                const originalText = btn.innerText;
+
+                btn.disabled = true;
+                btn.innerText = 'Transmitting...';
+                status.innerText = '🚀 Preparing to send...';
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                try {
+                    const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        status.innerText = '✅ Message transmitted! Redirecting...';
+                        setTimeout(() => {
+                            window.location.href = '/success.html';
+                        }, 1000);
+                    } else {
+                        throw new Error('Failed to send');
+                    }
+                } catch (err) {
+                    btn.disabled = false;
+                    btn.innerText = originalText;
+                    status.style.color = '#ff4d4d';
+                    status.innerText = '❌ Failed to send. Please try again.';
+                }
+            });
+        </script>
+
+        <nav class="nav-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </nav>
+    </div>
+
+    <footer>
+        &copy; 2026 Footography GO. Crafted for collectors.
+    </footer>
+</body>
+
+</html>

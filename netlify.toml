@@ -1,0 +1,9 @@
+[build]
+  command = ""
+  publish = "."
+
+[[headers]]
+  for = "/config.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"

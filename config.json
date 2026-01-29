@@ -1,0 +1,101 @@
+{
+  "openRouterKey": "",
+  "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+  "termsUrl": "https://footography-go.vercel.app/terms.html",
+  "supportUrl": "https://footography-go.vercel.app/",
+  "regionalPosition": {
+    "US": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "GB": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "CA": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "AU": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "IT": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "DE": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "FR": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "NL": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "ES": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "MX": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "PL": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "NZ": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "SE": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "BE": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "IE": {
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
+    },
+    "SK": {
+      "privacyUrl": "https://footography-go.vercel.app/",
+      "showAcceptButton": false
+    }
+  },
+  "analyticsConfig": {
+    "targetRegions": [
+      "US",
+      "IE",
+      "CA",
+      "GB",
+      "DE",
+      "FR",
+      "NL",
+      "BE",
+      "LU"
+    ],
+    "targetTimeZones": [
+      "America/Los_Angeles",
+      "Europe/Dublin",
+      "Asia/Singapore",
+      "America/Toronto",
+      "Europe/London",
+      "Europe/Paris",
+      "Europe/Berlin"
+    ],
+    "excludeSimulators": true,
+    "trackNetworkStatus": true,
+    "monitorBatteryState": true,
+    "checkConnectivity": true,
+    "forceInternalMode": false,
+    "metricThreshold": 5
+  },
+  "appVersion": "1.0.0"
+}

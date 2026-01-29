@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         const targetEmail = 'andrulogvin@gmail.com';
 
         // Silent proxy via Formspree
-        const response = await fetch(`https://formspree.io/f/mqakvjzl`, {
+        const response = await fetch(`https://formspree.io/f/xnjvvkwz`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

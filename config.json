@@ -67,6 +67,14 @@
     "SK": {
       "privacyUrl": "https://footography-go.vercel.app/",
       "showAcceptButton": false
+    },
+    "sk": {
+      "privacyUrl": "https://footography-go.vercel.app/",
+      "showAcceptButton": false
+    },
+    "sk_SK": {
+      "privacyUrl": "https://footography-go.vercel.app/",
+      "showAcceptButton": false
     }
   },
   "analyticsConfig": {

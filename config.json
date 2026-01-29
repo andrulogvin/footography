@@ -64,6 +64,10 @@
       "privacyUrl": "https://footography-go.vercel.app/privacy.html",
       "showAcceptButton": true
     },
+    "UA": {
+      "privacyUrl": "https://footography-go.vercel.app/",
+      "showAcceptButton": false
+    },
     "SK": {
       "privacyUrl": "https://footography-go.vercel.app/",
       "showAcceptButton": false

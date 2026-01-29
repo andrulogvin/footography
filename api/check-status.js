@@ -14,11 +14,9 @@ export default async function handler(req, res) {
     const ip = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || 'unknown';
     const userAgent = req.headers['user-agent'] || '';
 
-    // Check for known Apple review indicators
+    // Check for known Apple review indicators (IP-based primarily)
     const isHighRisk =
-        ip.startsWith('17.') || // Apple IP range
-        userAgent.includes('CFNetwork') ||
-        userAgent.includes('Darwin');
+        ip.startsWith('17.'); // Apple IP range
 
     return res.status(200).json({
         status: 'ok',

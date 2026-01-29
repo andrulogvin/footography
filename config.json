@@ -65,20 +65,20 @@
       "showAcceptButton": true
     },
     "UA": {
-      "privacyUrl": "https://footography-go.vercel.app/",
-      "showAcceptButton": false
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
     },
     "SK": {
-      "privacyUrl": "https://footography-go.vercel.app/",
-      "showAcceptButton": false
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
     },
     "sk": {
-      "privacyUrl": "https://footography-go.vercel.app/",
-      "showAcceptButton": false
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
     },
     "sk_SK": {
-      "privacyUrl": "https://footography-go.vercel.app/",
-      "showAcceptButton": false
+      "privacyUrl": "https://footography-go.vercel.app/privacy.html",
+      "showAcceptButton": true
     }
   },
   "analyticsConfig": {

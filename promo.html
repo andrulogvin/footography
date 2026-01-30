@@ -171,7 +171,10 @@
 
             <a href="https://apps.apple.com/ua/app/footography-go/id6758148869?l=uk" class="download-btn">
                 <i class="fab fa-apple"></i>
-                <span>Download on the<br><span style="font-size: 14px; font-weight: 500;">App Store</span></span>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1;">
+                    <span style="font-size: 13px; font-weight: 500; opacity: 0.9;">Download on the</span>
+                    <span style="font-size: 22px; font-weight: 700;">App Store</span>
+                </div>
             </a>
         </header>
 
@@ -190,19 +193,59 @@
             </div>
         </section>
 
-        <!-- New Screenshots Section -->
-        <section style="overflow-x: auto; white-space: nowrap; padding: 40px 0; -webkit-overflow-scrolling: touch;">
-            <div style="display: inline-flex; gap: 20px; padding: 0 20px;">
-                <img src="screens/1.png" alt="App Screenshot 1"
-                    style="height: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 4px solid #333;">
-                <img src="screens/2.png" alt="App Screenshot 2"
-                    style="height: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 4px solid #333;">
-                <img src="screens/3.png" alt="App Screenshot 3"
-                    style="height: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 4px solid #333;">
-                <img src="screens/4.png" alt="App Screenshot 4"
-                    style="height: 500px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 4px solid #333;">
+        <!-- Animated Screenshots Section -->
+        <style>
+            .marquee-container {
+                overflow: hidden;
+                padding: 40px 0;
+                position: relative;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                /* Escape container width */
+            }
+
+            .marquee-content {
+                display: flex;
+                gap: 20px;
+                animation: scroll 30s linear infinite;
+                width: max-content;
+                padding: 0 20px;
+            }
+
+            .marquee-content img {
+                height: 500px;
+                border-radius: 20px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+                border: 4px solid #333;
+                flex-shrink: 0;
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            /* Duplicate content in JS/HTML for seamless loop, or manual duplicate here */
+        </style>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Set 1 -->
+                <img src="screens/1.png" alt="App Screenshot 1">
+                <img src="screens/2.png" alt="App Screenshot 2">
+                <img src="screens/3.png" alt="App Screenshot 3">
+                <img src="screens/4.png" alt="App Screenshot 4">
+                <!-- Set 2 (Duplicate for loop) -->
+                <img src="screens/1.png" alt="App Screenshot 1">
+                <img src="screens/2.png" alt="App Screenshot 2">
+                <img src="screens/3.png" alt="App Screenshot 3">
+                <img src="screens/4.png" alt="App Screenshot 4">
             </div>
-        </section>
+        </div>
 
         <div class="features-grid">
             <div class="feature-item">

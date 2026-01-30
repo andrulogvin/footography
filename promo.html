@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footography GO | The Ultimate Sneaker Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .promo-tag {
+            background: rgba(121, 69, 229, 0.2);
+            color: var(--primary-light);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(121, 69, 229, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #a0a0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px -5px rgba(121, 69, 229, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px -5px rgba(121, 69, 229, 0.6);
+            background: var(--primary-light);
+        }
+
+        .download-btn i {
+            font-size: 24px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            text-align: left;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(121, 69, 229, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-light);
+            font-size: 24px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        .preview-section {
+            margin: 0 -60px;
+            padding: 40px 60px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+            text-align: center;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-stat {
+            display: inline-block;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: white;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .preview-section {
+                margin: 0 -30px;
+                padding: 30px;
+            }
+
+            .app-stat {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="promo-tag">New Release</div>
+            <h1>Your Sneakers.<br>Organized.</h1>
+            <p>The smartest way to catalog, track, and manage your sneaker collection. Powered by AI.</p>
+
+            <a href="https://apps.apple.com/app/footography-go" class="download-btn">
+                <i class="fab fa-apple"></i>
+                <span>Download on the<br><span style="font-size: 14px; font-weight: 500;">App Store</span></span>
+            </a>
+        </header>
+
+        <section class="preview-section">
+            <div class="app-stat">
+                <span class="stat-value">AI</span>
+                <span class="stat-label">Smart Recognition</span>
+            </div>
+            <div class="app-stat">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Device Privacy</span>
+            </div>
+            <div class="app-stat">
+                <span class="stat-value">4.9</span>
+                <span class="stat-label">User Rating</span>
+            </div>
+        </section>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-camera"></i></div>
+                <h3>Instant Scan</h3>
+                <p>Snap a photo and let our AI instantly identify your kicks.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-database"></i></div>
+                <h3>Offline Vault</h3>
+                <p>Your collection stays on your device. No cloud uploads needed.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Market Value</h3>
+                <p>Track the real-time value of your holy grails.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <p style="margin-bottom: 20px;">Ready to organize your vault?</p>
+            <a href="https://apps.apple.com/app/footography-go"
+                style="color: var(--primary-light); font-weight: 600; text-decoration: none;">Get Footography GO
+                &rarr;</a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="index.html">Support</a>
+        </nav>
+    </div>
+
+    <footer>
+        &copy; 2026 Footography GO. Crafted for collectors.
+    </footer>
+</body>
+
+</html>

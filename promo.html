@@ -195,29 +195,34 @@
 
         <!-- Animated Screenshots Section -->
         <style>
-            .marquee-container {
+            .marquee-wrapper {
                 overflow: hidden;
                 padding: 40px 0;
                 position: relative;
-                width: 100vw;
-                margin-left: calc(-50vw + 50%);
-                /* Escape container width */
+                width: 100%;
+                mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             }
 
-            .marquee-content {
+            .marquee-track {
                 display: flex;
                 gap: 20px;
-                animation: scroll 30s linear infinite;
                 width: max-content;
-                padding: 0 20px;
+                animation: scroll 40s linear infinite;
             }
 
-            .marquee-content img {
-                height: 500px;
+            .marquee-track:hover {
+                animation-play-state: paused;
+            }
+
+            .marquee-track img {
+                height: 400px;
+                width: auto;
                 border-radius: 20px;
                 box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-                border: 4px solid #333;
+                border: 2px solid rgba(255, 255, 255, 0.1);
                 flex-shrink: 0;
+                object-fit: cover;
             }
 
             @keyframes scroll {
@@ -226,24 +231,32 @@
                 }
 
                 100% {
-                    transform: translateX(-50%);
+                    transform: translateX(calc(-50% - 10px));
                 }
-            }
 
-            /* Duplicate content in JS/HTML for seamless loop, or manual duplicate here */
+                /* 50% of total width - half gap correction */
+            }
         </style>
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <!-- Set 1 -->
-                <img src="screens/1.png" alt="App Screenshot 1">
-                <img src="screens/2.png" alt="App Screenshot 2">
-                <img src="screens/3.png" alt="App Screenshot 3">
-                <img src="screens/4.png" alt="App Screenshot 4">
-                <!-- Set 2 (Duplicate for loop) -->
-                <img src="screens/1.png" alt="App Screenshot 1">
-                <img src="screens/2.png" alt="App Screenshot 2">
-                <img src="screens/3.png" alt="App Screenshot 3">
-                <img src="screens/4.png" alt="App Screenshot 4">
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <!-- Original Set -->
+                <img src="screens/1.png" alt="Screen 1">
+                <img src="screens/2.png" alt="Screen 2">
+                <img src="screens/3.png" alt="Screen 3">
+                <img src="screens/4.png" alt="Screen 4">
+                <img src="screens/1.png" alt="Screen 1">
+                <img src="screens/2.png" alt="Screen 2">
+                <img src="screens/3.png" alt="Screen 3">
+                <img src="screens/4.png" alt="Screen 4">
+                <!-- Cloned Set for Seamless Loop -->
+                <img src="screens/1.png" alt="Screen 1">
+                <img src="screens/2.png" alt="Screen 2">
+                <img src="screens/3.png" alt="Screen 3">
+                <img src="screens/4.png" alt="Screen 4">
+                <img src="screens/1.png" alt="Screen 1">
+                <img src="screens/2.png" alt="Screen 2">
+                <img src="screens/3.png" alt="Screen 3">
+                <img src="screens/4.png" alt="Screen 4">
             </div>
         </div>
 
